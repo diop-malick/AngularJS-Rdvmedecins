@@ -88,7 +88,7 @@ rdvmedecinsApp.controller('HomeCtrl', ['$scope', 'config', '$filter', '$translat
           return;
         }
         utils.debug("[homeCtrl] selectedMedecin", selectedMedecin);
-        
+
         // on met le jour au format yyyy-MM-dd
         app.formattedJour = $filter('date')(jour, 'yyyy-MM-dd');
         // préparation modèle pour la suite
@@ -109,6 +109,7 @@ rdvmedecinsApp.controller('HomeCtrl', ['$scope', 'config', '$filter', '$translat
           // on retourne la promesse d'achèvement de la tâche
           return task.action.promise;
         });
+
         // on analyse le résultat
         promise.then(function (result) {
           // fin d'attente

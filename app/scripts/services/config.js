@@ -39,7 +39,7 @@ angular.module("rdvmedecinsApp")
       // temps d'attente avant une tâche
       waitingTimeBeforeTask: 0,
       // mode debug
-      debug: true,
+      debug: false,
       // les deux locales utilisées
       locales: {
         fr: {

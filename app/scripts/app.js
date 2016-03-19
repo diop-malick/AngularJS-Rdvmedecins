@@ -39,9 +39,9 @@ var rdvmedecinsApp = angular.module('rdvmedecinsApp', [
                 controller: 'HomeCtrl',
                 // controllerAs: 'home'
             })
-            .when('/angenda', {
-                templateUrl: 'views/angenda.html',
-                controller: 'AngendaCtrl',
+            .when('/agenda', {
+                templateUrl: 'views/agenda.html',
+                controller: 'AgendaCtrl',
                 // controllerAs: 'angenda'
             })
             .when('/resa', {
@@ -58,8 +58,8 @@ var rdvmedecinsApp = angular.module('rdvmedecinsApp', [
     // ------------------------ i18n
   rdvmedecinsApp.config(function ($translateProvider) {
     $translateProvider.translations("fr", {
-      application_header: "Cabinet Médical<br/>Les Médecins Associés",
-      options_afficherAgenda: "Agenda",
+      application_header: "Système gestion RDV <br/> Cabinet Médical",
+      options_afficherAgenda: "Afficher Agenda",
       options_home: "Accueil",
       options_retourAgenda: "Agenda",
       options_validerRv: "Valider",
@@ -84,7 +84,7 @@ var rdvmedecinsApp = angular.module('rdvmedecinsApp', [
       username: "Utilisateur",
       password: "Mot de passe",
       authentification_failure: "Echec de l'authentification",
-      identification: "Authentifiez-vous pour accéder à l'application.<br/><br>Pour connaître le rôle des différentes saisies, passez le curseur dessus pour avoir une aide.",
+      identification: "Authentifiez-vous pour accéder à l'application",
       langue: "Langue",
       langue_fr: "Français",
       langue_en: "English",
@@ -153,7 +153,7 @@ var rdvmedecinsApp = angular.module('rdvmedecinsApp', [
       username: "User name",
       password: "Password",
       authentification_failure: "Authentification failure",
-      identification: "You have to authenticate yourself to get access to the application.<br/><br/>To know the meaning of the different inputs, move the mouse on them to get some help.",
+      identification: "Sign in to access App",
       langue: "Language",
       langue_fr: "Français",
       langue_en: "English",

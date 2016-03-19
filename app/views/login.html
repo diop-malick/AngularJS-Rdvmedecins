@@ -1,0 +1,27 @@
+<!-- Bootstrap Jumbotron -->
+<div class="jumbotron" ng-style="app.navbarstart.show || app.navbarrun.show ? {'margin-top':'20px'} : {'margin-top': '-40px'}">
+  <div class="row">
+    <div class="col-md-2">
+      <img src="images/caduceus.jpg" alt="RvMedecins"/>
+    </div>
+    <div class="col-md-10">
+      <h1 translate="{{ 'application_header' }}"></h1>
+    </div>
+  </div>
+
+<form class="form-signin">
+    <h2 class="form-signin-heading">Sign in to access App</h2>
+    <label for="inputEmail" class="sr-only"> identification Username</label>
+    <input type="text" id="inputEmail" class="form-control" placeholder="{{'username' | translate}}" tooltip="{{'tooltip_user_name'|translate}}" tooltip-placement="bottom" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="{{'password' | translate}}" tooltip="{{'tooltip_password'|translate}}" tooltip-placement="bottom" required>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="remember-me"> Remember me
+        </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" tooltip="{{'tooltip_authenticate'|translate}}" tooltip-placement="bottom" ng-click="login.authenticate(app.serverUrl,app.username,app.password)">Sign in</button>
+</form>
+
+</div>
+

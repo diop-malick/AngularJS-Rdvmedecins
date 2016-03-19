@@ -8,9 +8,10 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="http://bootswatch.com/flatly/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" /> -->
     <link rel="stylesheet" href="bower_components/bootstrap-select/dist/css/bootstrap-select.css" />
+    <!-- bower:css -->
     <!-- endbower -->
     <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
 
@@ -34,10 +35,12 @@
         <!-- les barres de navigation -->
         <ng-include src="'views/navbar-start.html'" ng-show="app.navbarstart.show"></ng-include>
         <ng-include src="'views/navbar-run.html'" ng-show="app.navbarrun.show"></ng-include>
-        <!-- le jumbotron -->
-        <ng-include src="'views/jumbotron.html'"></ng-include>
         <!-- le titre de la page -->
-        <div class="alert alert-info" ng-show="app.titre.show" translate="{{app.titre.text}}" translate-values="{{app.titre.model}}"></div>
+        <!-- <div class="alert alert-info" ng-show="app.titre.show" translate="{{app.titre.text}}" translate-values="{{app.titre.model}}"></div> -->
+        <ol class="breadcrumb">
+            <li><a href="#/">Acceuil</a></li>
+            <li class="active">{{post.title | limitTo: 10}}</li>
+        </ol>
         <!-- les erreurs de la page -->
         <errors model="app.errors" ng-show="app.errors.show"></errors>
         <!-- le message d'attente -->
@@ -95,7 +98,7 @@
     <!-- <script src="scripts/controllers/about.js"></script> -->
     <script src="scripts/controllers/loginCtrl.js"></script>
     <script src="scripts/controllers/homeCtrl.js"></script>
-    <script src="scripts/controllers/angendaCtrl.js"></script>
+    <script src="scripts/controllers/agendaCtrl.js"></script>
     <script src="scripts/controllers/resaCtrl.js"></script>
     <!-- endbuild -->
 

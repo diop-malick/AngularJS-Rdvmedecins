@@ -1,27 +1,31 @@
+<div class="container">
 <div class="row" style="margin-bottom: 20px">
     <!-- liste des médecins -->
     <list model="app.medecins"></list>
     <!-- le calendrier -->
-    <div class="col-md-3">
-        <h2 translate="rv_jour"></h2>
-        <div style="display:inline-block; min-height:290px;">
-            <datepicker ng-model="home.datepicker.jour" min-date="home.datepicker.minDate" show-weeks="true" class="well well-sm"></datepicker>
-        </div>
+        <!-- <div class="center-block"> -->
+    <h2 class="center-block" translate="rv_jour"></h2>
+    <div class="center-block" style="display:inline-block; min-height:290px;">
+        <datepicker ng-model="home.datepicker.jour" min-date="home.datepicker.minDate" show-weeks="true" class="well well-sm"></datepicker>
+        <!-- </div> -->
     </div>
 </div>
-<hr>
+<div class="row">
 
+</div>
+<div class="row">
+    <button type="button" class="btn btn-primary center-block" translate="options_afficherAgenda" ng-click="home.afficherAgenda()" tooltip="{{'tooltip_afficher_agenda'|translate}}" tooltip-placement="bottom" ng-show="app.menu.afficherAgenda"></button>
+</div>
+</div>
 <!-- ui-bootstrap datepicker online -->
 <!-- <h4>Inline</h4>
     <div style="display:inline-block; min-height:290px;">
       <uib-datepicker ng-model="home.datepicker.jour" class="well well-sm" datepicker-options="inlinedateOptions"></uib-datepicker>
 </div> -->
-
 <!-- test plugin pickadate - OK -->
 <!-- <div class="form-group">
     <input class="form-control pluginPickadate" datepicker-options="{today:'Aujourdhui'}" text="text" placeholder="date" ng-model="date" />
 </div> -->
-
 <!-- ui-bootstrap datepicker select input - OK -->
 <!-- <div class="row">
     <div class="col-sm-4">
@@ -31,5 +35,3 @@
         <mydatepicker ng-model="home.datepicker.jour" opened="opened" />
     </div>
 </div> -->
-
-
