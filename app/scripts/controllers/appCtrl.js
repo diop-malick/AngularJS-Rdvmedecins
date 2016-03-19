@@ -1,13 +1,14 @@
 'use strict';
 
 angular.module("rdvmedecinsApp")
-  .controller("appCtrl", ['$scope', 'config', 'utils', '$location', '$locale',
+  .controller("AppCtrl", ['$scope', 'config', 'utils', '$location', '$locale',
     function ($scope, config, utils, $location, $locale) {
 
       // debug
       utils.debug("[app] init");
 
       // ----------------------------------------initialisation page
+
       // les modèles des # pages
       $scope.app = {waitingTimeBeforeTask: config.waitingTimeBeforeTask};
       $scope.login = {};
