@@ -8,6 +8,7 @@
  *
  * Main module of the application.
  */
+ // --------------------- modules
 angular
   .module('rdvmedecinsApp', [
     'ngAnimate',
@@ -22,14 +23,24 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl',
+        // controllerAs: 'login'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/home', {
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl',
+        // controllerAs: 'home'
+      })
+      .when('/angenda', {
+        templateUrl: 'views/angenda.html',
+        controller: 'AngendaCtrl',
+        // controllerAs: 'angenda'
+      })
+      .when('/resa', {
+        templateUrl: 'views/resa.html',
+        controller: 'ResaCtrl',
+        // controllerAs: 'resa'
       })
       .otherwise({
         redirectTo: '/'
