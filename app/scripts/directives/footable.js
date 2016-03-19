@@ -1,6 +1,4 @@
-/**
- * Created by ST on 14/05/2014.
- */
+'use strict';
 
 angular.module("rdvmedecinsApp").directive('footable', ['$timeout', 'utils', function ($timeout, utils) {
   return {

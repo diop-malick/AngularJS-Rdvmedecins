@@ -35,6 +35,9 @@ module.exports = function(config) {
       'bower_components/bootstrap-select/dist/js/bootstrap-select.js',
       'bower_components/angular-translate/angular-translate.js',
       'bower_components/angular-base64/angular-base64.js',
+      'bower_components/pickadate/lib/picker.js',
+      'bower_components/pickadate/lib/picker.date.js',
+      'bower_components/pickadate/lib/picker.time.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

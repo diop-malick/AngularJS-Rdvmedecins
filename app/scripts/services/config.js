@@ -1,6 +1,5 @@
-/**
- * Created by ST on 05/05/2014.
- */
+'use strict';
+
 angular.module("rdvmedecinsApp")
   .factory('config', function () {
     return {

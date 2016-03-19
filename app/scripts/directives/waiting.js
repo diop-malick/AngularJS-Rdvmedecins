@@ -1,6 +1,5 @@
-/**
- * Created by ST on 06/05/2014.
- */
+'use strict';
+
 angular.module("rdvmedecinsApp")
   .directive("waiting", ['utils', function (utils) {
     // instance de la directive retournée

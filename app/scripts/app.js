@@ -10,12 +10,12 @@
  */
 // --------------------- modules
 var app = angular.module('rdvmedecinsApp', [
-        'ngAnimate',
+        'ngAnimate', // animations
         'ngAria',
         'ngCookies',
         'ngMessages',
         'ngResource',
-        'ngRoute',
+        'ngRoute', // routing
         'ngSanitize',
         'ngTouch',
 
@@ -23,7 +23,7 @@ var app = angular.module('rdvmedecinsApp', [
         "pascalprecht.translate",
         "base64",
         'ngLocale',
-        'ui.bootstrap'
+        'ui.bootstrap' // Twitter Bootstrap Support
 
     ]);
     

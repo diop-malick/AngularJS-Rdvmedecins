@@ -17,8 +17,8 @@ angular.module('rdvmedecinsApp')
       // contrôle de navigation
       var lastView = $scope.app.view;
       utils.debug("[resaCtrl] lastView", lastView);
-      var navigationAllowed = lastView.url == config.urlResa
-        || (lastView.url == config.urlAgenda && lastView.done);
+      var navigationAllowed = lastView.url === config.urlResa
+        || (lastView.url === config.urlAgenda && lastView.done);
       if (!navigationAllowed) {
         // on ne bouge pas
         $location.path(lastView.url);
@@ -103,7 +103,7 @@ angular.module('rdvmedecinsApp')
         promise = promise.then(function (result) {
           utils.debug("[resaCtrl] resa success", result);
           // on analyse la réponse
-          if (result.err != 0) {
+          if (result.err !== 0) {
             // il y a eu des erreurs pour valider le rv
             app.errors.title = {text: config.postResaErrors, values: {}};
             app.errors.messages = utils.getErrors(result, $filter);
@@ -136,7 +136,7 @@ angular.module('rdvmedecinsApp')
             return;
           }
           // on analyse la réponse
-          if (result.err != 0) {
+          if (result.err !== 0) {
             // il y a eu des erreurs pour obtenir l'agenda
             app.errors = {title: {text: config.getAgendaErrors, values: {}}, messages: utils.getErrors(result, $filter), show: true};
           } else {

@@ -17,7 +17,7 @@ angular.module('rdvmedecinsApp')
             // contrôle de navigation
             var lastView = $scope.app.view;
             utils.debug("[homeCtrl] lastView", lastView);
-            var navigationAllowed = lastView.url == config.urlHome || lastView.url == config.urlAgenda || (lastView.url == config.urlLogin && lastView.done);
+            var navigationAllowed = lastView.url === config.urlHome || lastView.url === config.urlAgenda || (lastView.url === config.urlLogin && lastView.done);
             if (!navigationAllowed) {
                 // on ne bouge pas
                 $location.path(lastView.url);
@@ -49,7 +49,52 @@ angular.module('rdvmedecinsApp')
             }
 
 
+
             // ------------------------------------- méthodes du modèle
+
+            // datepicker
+
+     //        $scope.rdvDate = new Date();
+
+     //        $scope.dateOptions = {
+     //            dateDisabled: disabled,
+     //            formatYear: 'yy',
+     //            maxDate: new Date(2020, 5, 22),
+     //            minDate: new Date(),
+     //            startingDay: 1
+     //        };
+     //        // Disable weekend selection
+     //        function disabled(data) {
+     //            var date = data.date,
+     //                mode = data.mode;
+     //            return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
+     //        }
+
+     //        $scope.openDatepicker = function() {
+     //        	console.log("TEST DATEPICKER");
+     //            $scope.popupDate.opened = true;
+     //        };
+
+     //        $scope.dateFormats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+     //        $scope.dateFormat = $scope.dateFormats[0];
+  			// $scope.altInputdDteFormats = ['M!/d!/yyyy'];
+
+     //        $scope.popupDate = {
+     //            opened: false
+     //        };
+
+               // $scope.formData      = {};
+			  // $scope.formData.date = "";
+			  // $scope.opened        = false;
+
+			  app.dateOptions = "test";
+			  
+				//Datepicker
+				// $scope.dateOptions = {
+				// 	'year-format': "'yy'",
+				// 	'show-weeks' : false
+				// };
+
 
             // changement de langue
             home.setLang = function(langKey) {
@@ -77,7 +122,7 @@ angular.module('rdvmedecinsApp')
                 var selectedMedecin = undefined;
                 if (idMedecin) {
                     angular.forEach(app.medecins.data, function(medecin) {
-                        if (medecin.id == idMedecin) {
+                        if (medecin.id === idMedecin) {
                             selectedMedecin = medecin;
                         }
                     });
@@ -111,7 +156,7 @@ angular.module('rdvmedecinsApp')
                     // fin d'attente
                     app.waiting.show = false;
                     // erreur ?
-                    if (result.err == 0) {
+                    if (result.err === 0) {
                         // on met les données acquises dans la session
                         app.agenda = result.data;
                         // on passe à la vue suivante

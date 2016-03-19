@@ -1,6 +1,5 @@
-/**
- * Created by ST on 06/05/2014.
- */
+'use strict';
+
 angular.module("rdvmedecinsApp")
   .directive("list", ['utils', '$timeout', function (utils, $timeout) {
     // instance de la directive retournée

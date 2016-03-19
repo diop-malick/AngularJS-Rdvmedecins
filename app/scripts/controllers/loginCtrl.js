@@ -71,7 +71,7 @@ angular.module('rdvmedecinsApp')
             return;
           }
           // on analyse le résultat de la tâche précédente
-          if (result.err == 0) {
+          if (result.err === 0) {
             // on met les données acquises dans le modèle
             app.medecins = {title: {text: config.listMedecinsTitle, values: {}}, data: result.data, show: true, id: 'medecins'};
             // on demande la liste des clients
@@ -94,7 +94,7 @@ angular.module('rdvmedecinsApp')
             return;
           }
           // on analyse le résultat de la tâche précédente
-          if (result.err == 0) {
+          if (result.err === 0) {
             // on met les clients dans le modèle
             app.clients = {
               title: {text: config.listClientsTitle, values: {}},
