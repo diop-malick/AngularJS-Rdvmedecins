@@ -1,7 +1,7 @@
 /**
  * Created by ST on 05/05/2014.
  */
-angular.module("rdvmedecins")
+angular.module("rdvmedecinsApp")
   .factory('utils', ['config', '$timeout', '$q', function (config, $timeout, $q) {
 
     // mode debug

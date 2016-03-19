@@ -1,7 +1,7 @@
 /**
  * Created by ST on 06/05/2014.
  */
-angular.module("rdvmedecins")
+angular.module("rdvmedecinsApp")
   .directive("waiting", ['utils', function (utils) {
     // instance de la directive retournée
     return {
