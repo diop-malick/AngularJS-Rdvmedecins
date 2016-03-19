@@ -54,7 +54,7 @@ angular.module("rdvmedecinsApp")
           break;
       }
       // si pas de msg, on en met un
-      if (!errors || errors.length == 0) {
+      if (!errors || errors.length === 0) {
         errors = ['error_unknown'];
       }
       // on rend la liste des erreurs

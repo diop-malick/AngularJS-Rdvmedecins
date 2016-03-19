@@ -37,7 +37,7 @@ angular.module("rdvmedecinsApp")
       // délai d'attente maximal pour les appels http en millisecondes
       timeout: 1000,
       // temps d'attente avant une tâche
-      waitingTimeBeforeTask: 3000,
+      waitingTimeBeforeTask: 0,
       // mode debug
       debug: true,
       // les deux locales utilisées
@@ -136,7 +136,7 @@ angular.module("rdvmedecinsApp")
           },
           "id": "fr-fr",
           "pluralCat": function (n) {
-            if (n >= 0 && n <= 2 && n != 2) {
+            if (n >= 0 && n <= 2 && n !== 2) {
               return PLURAL_CATEGORY.ONE;
             }
             return PLURAL_CATEGORY.OTHER;
@@ -236,7 +236,7 @@ angular.module("rdvmedecinsApp")
           },
           "id": "en-us",
           "pluralCat": function (n) {
-            if (n == 1) {
+            if (n === 1) {
               return PLURAL_CATEGORY.ONE;
             }
             return PLURAL_CATEGORY.OTHER;

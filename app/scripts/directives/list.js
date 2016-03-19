@@ -13,7 +13,7 @@ angular.module("rdvmedecinsApp")
       // fonction lien avec le document
       link: function (scope, element, attrs) {
         // à chaque fois que attrs["model"] change, le modèle de la directive doit changer également
-        scope.$watch(attrs["model"], function (newValue) {
+        scope.$watch(attrs['model'], function (newValue) {
           utils.debug("directive list newValue", newValue);
           // on met à jour le modèle de la directive
           scope.model = newValue;

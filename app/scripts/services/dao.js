@@ -37,7 +37,7 @@ angular.module("rdvmedecinsApp")
           utils.debug("[dao] getData[" + urlAction + "] success réponse", response);
           // réponse
           var payLoad = response.data;
-          réponse = payLoad.status == 0 ? {err: 0, data: payLoad.data} : {err: 1, messages: payLoad.data};
+          réponse = payLoad.status === 0 ? {err: 0, data: payLoad.data} : {err: 1, messages: payLoad.data};
           // on rend la réponse
           task.resolve(réponse);
         }

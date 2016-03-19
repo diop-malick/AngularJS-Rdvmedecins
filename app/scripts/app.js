@@ -9,16 +9,15 @@
  * Main module of the application.
  */
 // --------------------- modules
-var app = angular.module('rdvmedecinsApp', [
+var rdvmedecinsApp = angular.module('rdvmedecinsApp', [
         'ngAnimate', // animations
-        'ngAria',
-        'ngCookies',
-        'ngMessages',
-        'ngResource',
+        // 'ngAria',
+        // 'ngCookies',
+        // 'ngMessages',
+        // 'ngResource',
+        // 'ngSanitize',
+        // 'ngTouch',
         'ngRoute', // routing
-        'ngSanitize',
-        'ngTouch',
-
         "ngRoute",
         "pascalprecht.translate",
         "base64",
@@ -28,7 +27,7 @@ var app = angular.module('rdvmedecinsApp', [
     ]);
     
     // ------------------------ routage
-    app.config(function($routeProvider) {
+    rdvmedecinsApp.config(function($routeProvider) {
         $routeProvider
             .when('/', {
                 templateUrl: 'views/login.html',
@@ -57,7 +56,7 @@ var app = angular.module('rdvmedecinsApp', [
 
 
     // ------------------------ i18n
-  app.config(function ($translateProvider) {
+  rdvmedecinsApp.config(function ($translateProvider) {
     $translateProvider.translations("fr", {
       application_header: "Cabinet Médical<br/>Les Médecins Associés",
       options_afficherAgenda: "Agenda",

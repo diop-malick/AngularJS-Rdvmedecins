@@ -16,9 +16,9 @@ angular.module('rdvmedecinsApp')
       // contrôle de navigation
       var lastView = $scope.app.view;
       utils.debug("[agendaCtrl] lastView", lastView);
-      var navigationAllowed = lastView.url === config.urlAgenda
-        || lastView.url === config.urlResa
-        || (lastView.url === config.urlHome && lastView.done);
+      var navigationAllowed = lastView.url == config.urlAgenda
+        || lastView.url == config.urlResa
+        || (lastView.url == config.urlHome && lastView.done);
       if (!navigationAllowed) {
         // on ne bouge pas
         $location.path(lastView.url);
@@ -88,7 +88,7 @@ angular.module('rdvmedecinsApp')
         var done = false;
         for (var i = 0; i < creneauxMedecin.length && !done; i++) {
           var creneauMedecin = creneauxMedecin[i];
-          if (creneauMedecin.creneau.id === creneauId) {
+          if (creneauMedecin.creneau.id == creneauId) {
             // on met le créneau dans le modèle
             app.selectedCreneau = creneauMedecin;
             // trouvé
@@ -134,7 +134,7 @@ angular.module('rdvmedecinsApp')
             return;
           }
           // on analyse la réponse
-          if (result.err !== 0) {
+          if (result.err != 0) {
             // il y a eu des erreurs pour supprimer le rv
             app.errors.title = {text: config.postRemoveErrors, model: {}};
             app.errors.messages = utils.getErrors(result, $filter);
@@ -167,7 +167,7 @@ angular.module('rdvmedecinsApp')
             return;
           }
           // on analyse la réponse
-          if (result.err !== 0) {
+          if (result.err != 0) {
             // il y a eu des erreurs pour obtenir l'agenda
             app.errors.title = {text: config.getAgendaErrors, values: {}};
             app.errors.messages = utils.getErrors(result, $filter);
@@ -190,5 +190,4 @@ angular.module('rdvmedecinsApp')
     }
   ])
 ;
-
 

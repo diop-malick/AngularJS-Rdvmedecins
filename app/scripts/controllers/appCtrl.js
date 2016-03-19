@@ -8,7 +8,6 @@ angular.module("rdvmedecinsApp")
       utils.debug("[app] init");
 
       // ----------------------------------------initialisation page
-
       // les modèles des # pages
       $scope.app = {waitingTimeBeforeTask: config.waitingTimeBeforeTask};
       $scope.login = {};
@@ -59,3 +58,4 @@ angular.module("rdvmedecinsApp")
       app.waiting = {title: {text: config.msgWaitingInit, values: {}}, cancel: app.cancel, show: true};
     }])
 ;
+

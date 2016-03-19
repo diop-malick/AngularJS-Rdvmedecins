@@ -9,44 +9,27 @@
         </div>
     </div>
 </div>
+<hr>
+
+<!-- ui-bootstrap datepicker online -->
+<!-- <h4>Inline</h4>
+    <div style="display:inline-block; min-height:290px;">
+      <uib-datepicker ng-model="home.datepicker.jour" class="well well-sm" datepicker-options="inlinedateOptions"></uib-datepicker>
+</div> -->
+
+<!-- test plugin pickadate - OK -->
+<!-- <div class="form-group">
+    <input class="form-control pluginPickadate" datepicker-options="{today:'Aujourdhui'}" text="text" placeholder="date" ng-model="date" />
+</div> -->
+
+<!-- ui-bootstrap datepicker select input - OK -->
 <!-- <div class="row">
-    <div class="col-md-6">
-        <p class="input-group">
-            <input type="text" class="form-control" uib-datepicker-popup="{{dateFormat}}" ng-model="rdvDate" is-open="popupDate.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
-            <span class="input-group-btn">
-            <button type="button" class="btn btn-default" ng-click="openDatepicker()"><i class="glyphicon glyphicon-calendar"></i></button>
-          </span>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <label>Format: <span class="muted-text">(manual alternate <em>{{altInputdDteFormats[0]}}</em>)</span></label>
-            <select class="form-control" ng-model="dateFormat" ng-options="f for f in dateFormats">
-                <option></option>
-            </select>
-        </div>
-    </div>
-</div>
-<div class="row">
     <div class="col-sm-4">
         <p>Select Date:</p>
     </div>
     <div class="col-sm-8">
-        <mydatepicker ng-model="formData.date" date-options="dateOptions" opened="opened" />
+        <mydatepicker ng-model="home.datepicker.jour" opened="opened" />
     </div>
 </div> -->
-<div>
-  {{app.dateOptions}}
-</div>
 
-        <!-- test test datepicker -->
-        <div class="form-group">
-            <input class="form-control datepicker" datepicker-options="{today:'Aujourdhui'}" text="text" placeholder="date" ng-model="date" />
-        </div>
 
-<!-- <p class="input-group">
-    <input type="text" class="form-control" datepicker-popup="dd/MM/yyyy" ng-model="dt" is-open="status.opened"
-           min-date="minDate" max-date="'2020-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
-    <span class="input-group-btn">
-        <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-    </span>
-</p> -->

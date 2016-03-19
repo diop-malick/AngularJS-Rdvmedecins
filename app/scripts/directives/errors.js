@@ -13,7 +13,7 @@ angular.module("rdvmedecinsApp")
       // fonction lien avec le document
       link: function (scope, element, attrs) {
         // à chaque fois que attr["model"] change, le modèle de la page doit changer également
-        scope.$watch(attrs["model"], function (newValue) {
+        scope.$watch(attrs['model'], function (newValue) {
           utils.debug("[errors] watch newValue", newValue);
           scope.model = newValue;
         });
