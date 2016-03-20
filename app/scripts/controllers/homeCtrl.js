@@ -35,6 +35,7 @@ rdvmedecinsApp.controller('HomeCtrl', ['$scope', 'config', '$filter', '$translat
       app.navbarstart.show = false;
       app.navbarrun.show = true;
       app.errors.show = false;
+      app.breadcrumb.show = false;
       app.titre = {text: config.choixMedecinJourTitle, show: true, model: {}};
       // le modèle du calendrier
       var today = new Date();

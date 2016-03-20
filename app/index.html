@@ -33,13 +33,13 @@
         <ng-include src="'views/navbar-run.html'" ng-show="app.navbarrun.show"></ng-include>
         <!-- le titre de la page -->
         <!-- <div class="alert alert-info" ng-show="app.titre.show" translate="{{app.titre.text}}" translate-values="{{app.titre.model}}"></div> -->
-        <ol class="breadcrumb" ng-show="app.breadcrumb.show">
-            <li class="active">
+        <ol class="breadcrumb" ng-show="app.breadcrumb.show" ng-show="app.menu.home">
+            <li ui-sref-active="active">
                 <a href="">
-                    <span translate="options_home" ng-click="agenda.home()" ng-show="app.menu.home" tooltip="{{'tooltip_home'|translate}}" tooltip-placement="bottom"></span>
+                    <span translate="options_home" ng-click="agenda.home()" tooltip="{{'tooltip_home'|translate}}" tooltip-placement="bottom"></span>
                 </a>
             </li>
-            <li>
+            <li ui-sref-active="active">
                 <a href="">
                     <span translate="options_retourAgenda" ng-click="resa.retourAgenda()" ng-show="app.menu.retourAgenda" tooltip="{{'tooltip_retour_agenda'|translate}}" tooltip-placement="bottom"></span>
                 </a>

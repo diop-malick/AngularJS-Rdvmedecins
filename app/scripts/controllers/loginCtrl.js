@@ -26,6 +26,7 @@ rdvmedecinsApp.controller('LoginCtrl', ['$scope', 'config' , 'dao', '$location',
         // navbar
         app.navbarstart.show = true;
         app.navbarrun.show = false;
+        app.breadcrumb.show = false;
         app.titre = {text: config.identification, show: true, model: {}};
         // credentials
         app.serverUrl = "http://localhost:8080";
