@@ -19,7 +19,8 @@
     "footable": "^3.0.6",
     "angular-base64": "^2.0.5",
     "pickadate": "^3.5.6",
-    "angular-ui-router": "^0.2.18"
+    "angular-ui-router": "^0.2.18",
+    "angular-utils-ui-breadcrumbs": "^0.2.2"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"

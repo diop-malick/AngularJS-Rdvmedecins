@@ -23,7 +23,8 @@ var rdvmedecinsApp = angular.module('rdvmedecinsApp', [
         "pascalprecht.translate",
         "base64",
         'ngLocale',
-        'ui.bootstrap' // Twitter Bootstrap Support
+        'ui.bootstrap', // Twitter Bootstrap Support
+        'angularUtils.directives.uiBreadcrumbs'
     ]);
     
     // ------------------------ routage
@@ -37,22 +38,34 @@ var rdvmedecinsApp = angular.module('rdvmedecinsApp', [
             .state('login', {
               url : '/',
                 templateUrl: 'views/login.html',
-                controller: 'LoginCtrl'
+                controller: 'LoginCtrl',
+                data: {
+                    displayName: 'login'
+                }
             })
             .state('home', {
                 url : '/home',
                 templateUrl: 'views/home.html',
-                controller: 'HomeCtrl'
+                controller: 'HomeCtrl',
+                data: {
+                    displayName: 'Home'
+                }
             })
             .state('agenda', {
               url : '/agenda',
                 templateUrl: 'views/agenda.html',
-                controller: 'AgendaCtrl'
+                controller: 'AgendaCtrl',
+                data: {
+                 displayName: 'Agenda'
+                }
             })
             .state('resa', {
               url : '/resa',
                 templateUrl: 'views/resa.html',
-                controller: 'ResaCtrl'
+                controller: 'ResaCtrl',
+                data: {
+                    displayName: 'Reservation'
+                }
             }); 
     });
 
