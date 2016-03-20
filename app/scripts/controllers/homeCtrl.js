@@ -7,8 +7,8 @@
  * # HomeCtrl
  * Controller of the rdvmedecinsApp
  */
-rdvmedecinsApp.controller('HomeCtrl', ['$scope', 'config', '$filter', '$translate', '$locale', '$location', 'utils', 'dao',
-        function($scope, config, $filter, $translate, $locale, $location, utils, dao) {
+rdvmedecinsApp.controller('HomeCtrl', ['$scope', 'config', '$filter', '$translate', '$locale', '$location', 'utils', 'dao', '$state',
+        function($scope, config, $filter, $translate, $locale, $location, utils, dao, $state) {
 
                   // log
       utils.debug("[homeCtrl] init");
@@ -120,7 +120,8 @@ rdvmedecinsApp.controller('HomeCtrl', ['$scope', 'config', '$filter', '$translat
             app.agenda = result.data;
             // on passe à la vue suivante
             app.view.done = true;
-            $location.path(config.urlAgenda);
+            $state.go(config.urlAgenda);
+
           } else {
             // il y a eu des erreurs pour obtenir l'agenda
             app.errors = {

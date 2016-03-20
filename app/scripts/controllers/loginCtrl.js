@@ -7,8 +7,8 @@
  * # LoginCtrl
  * Controller of the rdvmedecinsApp
  */
-rdvmedecinsApp.controller('LoginCtrl', ['$scope', 'config' , 'dao', '$location', '$filter', 'utils', '$translate', '$locale',
-    function ($scope, config, dao, $location, $filter, utils, $translate, $locale) {
+rdvmedecinsApp.controller('LoginCtrl', ['$scope', 'config' , 'dao', '$location', '$filter', 'utils', '$translate', '$locale', '$state',
+    function ($scope, config, dao, $location, $filter, utils, $translate, $locale, $state) {
 
       // log
       utils.debug("[loginCtrl] init");
@@ -100,7 +100,8 @@ rdvmedecinsApp.controller('LoginCtrl', ['$scope', 'config' , 'dao', '$location',
               data: result.data, show: true, id: 'clients'};
             // on passe à la vue suivante
             app.view.done = true;
-            $location.path(config.urlHome);
+            $state.go(config.urlHome);
+
           } else {
             // il y a eu des erreurs pour obtenir la liste des clients
             app.errors = {

@@ -8,8 +8,8 @@
  * Controller of the rdvmedecinsApp
  */
 angular.module('rdvmedecinsApp')
-  .controller('ResaCtrl', ['$scope', 'config', '$filter', '$translate', '$locale', '$location', 'utils', 'dao',
-    function ($scope, config, $filter, $translate, $locale, $location, utils, dao) {
+  .controller('ResaCtrl', ['$scope', 'config', '$filter', '$translate', '$locale', '$location', 'utils', 'dao','$state',
+    function ($scope, config, $filter, $translate, $locale, $location, utils, dao, $state) {
 
      // log
       utils.debug("[resaCtrl] init");
@@ -35,6 +35,8 @@ angular.module('rdvmedecinsApp')
       // les barres de navigation
       app.navbarstart.show = false;
       app.navbarrun.show = true;
+      //  breadcrumb
+      app.breadcrumb.show = true;
       // le message d'attente
       app.waiting.show = false;
       app.waiting.title = {text: config.msgWaiting, values: {}};
@@ -70,7 +72,7 @@ angular.module('rdvmedecinsApp')
         app.errors.show = false;
         app.waiting.show = false;
         // navigation
-        $location.path(config.urlAgenda);
+        $state.go(config.urlAgenda);
       };
 
       // validation d'un rendez-vous

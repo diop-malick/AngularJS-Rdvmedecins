@@ -17,41 +17,43 @@ var rdvmedecinsApp = angular.module('rdvmedecinsApp', [
         // 'ngResource',
         // 'ngSanitize',
         // 'ngTouch',
-        'ngRoute', // routing
+        // 'ngRoute', 
+        'ui.router',
         "ngRoute",
         "pascalprecht.translate",
         "base64",
         'ngLocale',
         'ui.bootstrap' // Twitter Bootstrap Support
-
     ]);
     
     // ------------------------ routage
-    rdvmedecinsApp.config(function($routeProvider) {
-        $routeProvider
-            .when('/', {
+    rdvmedecinsApp.config(function($stateProvider, $urlRouterProvider) {
+        
+        //Set default route
+        $urlRouterProvider.otherwise('/');
+
+        //Declare states
+        $stateProvider
+            .state('login', {
+              url : '/',
                 templateUrl: 'views/login.html',
-                controller: 'LoginCtrl',
-                // controllerAs: 'login'
+                controller: 'LoginCtrl'
             })
-            .when('/home', {
+            .state('home', {
+                url : '/home',
                 templateUrl: 'views/home.html',
-                controller: 'HomeCtrl',
-                // controllerAs: 'home'
+                controller: 'HomeCtrl'
             })
-            .when('/agenda', {
+            .state('agenda', {
+              url : '/agenda',
                 templateUrl: 'views/agenda.html',
-                controller: 'AgendaCtrl',
-                // controllerAs: 'angenda'
+                controller: 'AgendaCtrl'
             })
-            .when('/resa', {
+            .state('resa', {
+              url : '/resa',
                 templateUrl: 'views/resa.html',
-                controller: 'ResaCtrl',
-                // controllerAs: 'resa'
-            })
-            .otherwise({
-                redirectTo: '/'
-            });
+                controller: 'ResaCtrl'
+            }); 
     });
 
 

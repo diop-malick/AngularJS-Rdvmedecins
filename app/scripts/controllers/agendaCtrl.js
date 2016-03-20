@@ -8,8 +8,8 @@
  * Controller of the rdvmedecinsApp
  */
 angular.module('rdvmedecinsApp')
-  .controller('AgendaCtrl', ['$scope', 'config', '$filter', '$translate', '$locale', '$location', 'utils', 'dao',
-    function ($scope, config, $filter, $translate, $locale, $location, utils, dao) {
+  .controller('AgendaCtrl', ['$scope', 'config', '$filter', '$translate', '$locale', '$location', 'utils', 'dao', '$state',
+    function ($scope, config, $filter, $translate, $locale, $location, utils, dao, $state) {
 
       // log
       utils.debug("[agendaCtrl] init");
@@ -33,6 +33,9 @@ angular.module('rdvmedecinsApp')
       // les barres de navigation
       app.navbarstart.show = false;
       app.navbarrun.show = true;
+      //  breadcrumb
+      app.breadcrumb.show = true;
+
       // le message d'attente
       app.waiting.show = false;
       app.waiting.title = {text: config.msgWaiting, values: {}};
@@ -77,7 +80,8 @@ angular.module('rdvmedecinsApp')
         app.errors.show = false;
         app.waiting.show = false;
         // navigation
-        $location.path(config.urlHome)
+        // $location.path(config.urlHome)
+        $state.go(config.urlHome);
       };
 
       // réservation d'un créneau

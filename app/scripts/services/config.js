@@ -23,10 +23,10 @@ angular.module("rdvmedecinsApp")
       listMedecinsTitle: 'list_medecins_title',
       listClientsTitle: 'list_clients_title',
       // urls du clients
-      urlLogin: "/login",
-      urlHome: "/home",
-      urlAgenda: "/agenda",
-      urlResa: "/resa",
+      urlLogin: "login",
+      urlHome: "home",
+      urlAgenda: "agenda",
+      urlResa: "resa",
       // urls du serveur
       urlSvrMedecins: "/getAllMedecins",
       urlSvrClients: "/getAllClients",

@@ -24,6 +24,8 @@ angular.module("rdvmedecinsApp")
       // pas de barres de navigation
       app.navbarrun = {show: false};
       app.navbarstart = {show: false};
+      // pas de breadcrumb
+      app.breadcrumb = {show: false};
       // pas d'erreurs
       app.errors = {show: false};
       // locale par défaut
